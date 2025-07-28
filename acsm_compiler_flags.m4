@@ -537,11 +537,11 @@ AC_DEFUN([ACSM_SET_CXX_FLAGS],
                           dnl 1676: unrecognized GCC pragma
                           dnl       petscconf_poison.h screams about this
 
-                          dnl --display_error_number is really useful when we need a pragma to disable
+                          dnl --display-error-number is really useful when we need a pragma to disable
                           dnl a newly-cropped-up overzealous error...
-                                ACSM_CXXFLAGS_DBG="$ACSM_CXXFLAGS_DBG -O0 --display_error_number -g -pedantic -Wno-long-long -Wunused -Wuninitialized --diag_suppress=11,111,177,445,1676"
-                                ACSM_CXXFLAGS_DEVEL="$ACSM_CXXFLAGS_DEVEL -O2 --display_error_number -g -pedantic -Wno-long-long -Wunused -Wuninitialized --diag_suppress=11,111,177,445,1676"
-                                ACSM_CXXFLAGS_OPT="$ACSM_CXXFLAGS_OPT -O2 --display_error_number --diag_suppress=11,111,177,445,1676"
+                                ACSM_CXXFLAGS_DBG="$ACSM_CXXFLAGS_DBG -O0 --x=c++ --forward-unknown-to-host-compiler --display-error-number -g -pedantic -Wno-long-long -Wunused -Wuninitialized --diag-suppress=11,111,177,445,1676"
+                                ACSM_CXXFLAGS_DEVEL="$ACSM_CXXFLAGS_DEVEL -O2 --x=c++ --forward-unknown-to-host-compiler --display-error-number -g -pedantic -Wno-long-long -Wunused -Wuninitialized --diag-suppress=11,111,177,445,1676"
+                                ACSM_CXXFLAGS_OPT="$ACSM_CXXFLAGS_OPT -O2 --x=c++ --forward-unknown-to-host-compiler --display-error-number --diag-suppress=11,111,177,445,1676"
 
                                 ACSM_NODEPRECATEDFLAG="-Wno-deprecated-declarations"
 
